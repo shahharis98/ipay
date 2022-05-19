@@ -15,7 +15,7 @@ namespace BusinessManager
         public int CreateUser(UserRequest userRequest)
         {
             bool exists=repository.IsExist<User>(x=>x.Email==userRequest.Email);
-            if (exists)
+            if (!exists)
             {
                 User user = new User()
                 {

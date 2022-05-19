@@ -28,10 +28,11 @@ namespace IPay.Controllers
         [HttpPost("signup")]
         public IActionResult SignUp(UserRequest userRequest)
         {
-            
-            ViewBag.Message=userManager.CreateUser(userRequest);
-            
-            
+            if (ModelState.IsValid)
+            {
+                ViewBag.Message = userManager.CreateUser(userRequest);
+            }
+           
             return View();
         }
 

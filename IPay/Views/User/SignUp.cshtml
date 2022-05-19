@@ -52,7 +52,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="userRole" class="control-label"></label>
-                  <select asp-for="userRole" asp-items="Html.GetEnumSelectList<UserRole>()">
+                  <select asp-for="userRole" asp-items="Html.GetEnumSelectList<UserRole>().Skip(1)">
                     <option value="">Select Role</option>
                 </select>
                 <span asp-validation-for="userRole" class="text-danger"></span>
