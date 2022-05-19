@@ -53,7 +53,7 @@ namespace DataAccess.DataRepository
 
         public bool IsExist<T>(Expression<Func<T, bool>> predicate) where T : class
         {
-           return appDbContext.Set<T>().Any();
+           return appDbContext.Set<T>().Any(predicate);
         }
 
         public int UpdateAndSave<T>(T model) where T : class

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\HP\\Documents\\GitHub\\IPay\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\HP\\Documents\\GitHub\\IPay\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\Model.csproj"
+              "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\Model.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\Model.csproj": {
+    "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Source\\Repos\\SolutionIPay\\Model\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\IPay\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
