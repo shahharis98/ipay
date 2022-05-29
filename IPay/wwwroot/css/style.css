@@ -70,7 +70,7 @@ body {
     display: grid;
     line-height: 2;
     gap: 1em;
-    padding:0.5rem;
+    padding: 0.5 em;
     padding-left: 0;
     grid-template-columns: 650px 900px;
     width: 50%;
@@ -154,7 +154,6 @@ body {
     .modal__form label {
         font-size: 1.7rem;
         font-weight: 500;
-        display:block;
     }
 
     .modal__form input {
@@ -240,28 +239,6 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-
-.haris {
-    text-align: center;
-    width: 40%;
-    margin: auto;
-    height: 651px;
-    padding: 82px;
-    background-color: aliceblue;
-    border-radius: 5px;
-    border: 4px black;
-    border-radius: 10px;
-    line-height: 55px;
+#password1 {
+    margin-left: 3rem;
 }
-input#RememberMe {
-    height: 27px;
-    padding-top: 6px;
-    width: 25px;
-    margin-top: auto;
-}
-.lb {
-    font-size: 28px;
-    font-size: 1.7rem;
-    font-weight: 500;
-}
-

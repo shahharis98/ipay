@@ -1,6 +1,6 @@
 ﻿using BusinessManager;
 using DataAccess.DataRepository;
-using IPay.Utilities;
+using IPay;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -46,33 +46,44 @@ namespace IPay.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LogIn(LoginRequest loginRequest)
         {
-            LoginResponse loginResponse= userManager.Login(loginRequest);
-            if (loginResponse.HasError)
+            if (ModelState.IsValid)
             {
-                ViewBag.Error = "Invalid Credentials";
-                return View();
-            }
-
-            else
-            {
-                ClaimsIdentity identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
-
-                identity.AddClaim(new Claim(AppCLaimTypes.id, loginResponse.Id.ToString()));
-                identity.AddClaim(new Claim(AppCLaimTypes.name, loginResponse.Name));
-                identity.AddClaim(new Claim(AppCLaimTypes.email, loginResponse.Email));
-
-                ClaimsPrincipal principal = new ClaimsPrincipal(identity);
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties
+                LoginResponse loginResponse = userManager.Login(loginRequest);
+                if (loginResponse.HasError)
                 {
-                    IsPersistent = loginRequest.RememberMe,
-                    AllowRefresh = true,
-                    ExpiresUtc = DateTime.UtcNow.AddSeconds(30)
-                });
+                    ViewBag.Error = "Invalid Credentials";
+                    return View();
+                }
+
+                else
+                {
+                    ClaimsIdentity identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    identity.AddClaim(new Claim(AppCLaimTypes.id, loginResponse.Id.ToString()));
+                    identity.AddClaim(new Claim(AppCLaimTypes.name, loginResponse.Name));
+                    identity.AddClaim(new Claim(AppCLaimTypes.email, loginResponse.Email));
+
+                    ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties
+                    {
+                        IsPersistent = loginRequest.RememberMe,
+                        AllowRefresh = true,
+                        ExpiresUtc = DateTime.UtcNow.AddSeconds(30)
+                    });
+                    TransactionRequest transactionRequest = new TransactionRequest();
+                    transactionRequest.Id = loginResponse.Id;
+                    return RedirectToAction("privacy", "home",transactionRequest);
+                }
                 
-                return RedirectToAction("privacy","home");
             }
-            
+            return View();
         }
+
+        
+
+        
+
+        
 
         public IActionResult Index()
         {

@@ -1,4 +1,4 @@
-﻿namespace IPay.Utilities
+﻿namespace IPay
 {
     public class AppCLaimTypes
     {

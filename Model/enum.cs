@@ -24,9 +24,5 @@ namespace Model
         Customer = 2
     }
 
-    public enum Transaction : byte
-    {
-        Debit=1,
-        Credit=2
-    }
+    
 }
