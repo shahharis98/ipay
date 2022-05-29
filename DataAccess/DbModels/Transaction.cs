@@ -19,7 +19,9 @@ namespace DataAccess.DbModels
 
         public DateTime dateTime { get; set; }
 
-        [ForeignKey(nameof(Id))]
-        public User user { get; set; }
+        public Guid userId { get; set; }
+
+        [ForeignKey(nameof(userId))]
+        public User User { get; set; }
     }
 }

@@ -18,9 +18,10 @@ namespace Model
         public Gender Gender { get; set; }
 
 
-        [Required(ErrorMessage = "Required!")]
+        
         public UserRole userRole { get; set; }
 
+        public UserStatus userStatus { get; set; }
 
         [Required(ErrorMessage = "Required!")]
         [DataType(DataType.Password)]
@@ -40,6 +41,8 @@ namespace Model
 
         [Required(ErrorMessage = "Required!")]
         public int _pin { get; set; }
+
+        public DateTime date { get; set; }
     }
 
 
